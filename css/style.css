@@ -1,0 +1,101 @@
+:root{
+    font-size: 10px;
+}
+
+*;
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    font-family:"Roboto";
+    min-height: 100vh;
+    background-color: #fafafa;
+    color: #262626;
+    padding-bottom: 3rem;
+}
+img{
+    display: block;
+}
+.contenedor{
+    max-width: 93.5rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+img{
+    width: auto ;
+    height: 360px ;
+}
+.imagenperfil{
+    width: auto ;
+    height: 180px ;
+}
+.boton  {
+    all: unset;
+    background: none;
+    color: none;
+    display: inline-block;
+    cursor: pointer;
+    border:none;
+}
+
+.boton:focus{
+    outline: 0.5rem auto #4d90fe;
+}
+.visual-oculta{
+    position:absolute !important;
+    height: 1px;
+    widows: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+
+.perfil{
+    padding: 5rem 0;
+}
+
+.perfil::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.imagen-perfil{
+    float: left;
+    width: calc(33.333% - 1rem);
+    display: flex;
+    justify-content: center;
+    margin-right: 3rem;
+}
+
+.imagen-perfil img{
+    border-radius:50%;
+    
+}
+
+.perfil-usuario-opciones,
+.perfil-estadisticas,
+.perfil-biografia{
+    float: left;
+    width: calc(66.666% - 2rem);
+}
+
+.perfil-usuario-opciones{
+    margin-top: 1.1rem;
+}
+.perfil-usuario-nombre{
+    display: inline-block;
+    font-size: 3.2rem;
+    font-weight: 300;
+}
+.boton-perfil-editar{
+    font-size: 1.4rem;
+    line-height: 1.8;
+    border: o.1rem solid #dbdbdb;
+    border-radius: o.3rem;
+    padding: 0 2.4rem;
+    margin-left: 2rem;
+}
