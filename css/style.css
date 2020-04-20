@@ -71,8 +71,10 @@ img{
     margin-right: 3rem;
 }
 
-.imagen-perfil img{
+.imagen-perfil img {
     border-radius:50%;
+    height:180px ;
+    width: auto;
     
 }
 
@@ -81,6 +83,7 @@ img{
 .perfil-biografia{
     float: left;
     width: calc(66.666% - 2rem);
+     
 }
 
 .perfil-usuario-opciones{
@@ -88,14 +91,180 @@ img{
 }
 .perfil-usuario-nombre{
     display: inline-block;
-    font-size: 3.2rem;
+    font-size: 4.5rem;
     font-weight: 300;
 }
 .boton-perfil-editar{
     font-size: 1.4rem;
     line-height: 1.8;
-    border: o.1rem solid #dbdbdb;
-    border-radius: o.3rem;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
     padding: 0 2.4rem;
     margin-left: 2rem;
+}
+
+.boton-perfil-opciones-btn{
+    font-size: 1.6rem;
+    margin-left:0.1rem;
+}
+
+.perfil-estadisticas{
+    margin-top:2.3rem;
+}
+.perfil-estadisticas li {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-right: 4rem;
+    cursor: pointer;
+}
+.perfil-estadisticas li : :last-of-type{
+    margin-right:0;
+}
+
+.perfil-biografia{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 2.3rem;
+}
+
+.perfil-nombre-real,
+.perfil-estadisticas-contador,
+.boton-perfil-editar{
+    font-weight: 600;
+}
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1em -1em;
+    padding-bottom: 3rem;
+}
+.galeria-item{
+    position: relative;
+    flex: 1 0 22rem;
+    margin: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.galeria-item:hover .galeria-item-info,
+.galeria-item:focus .galeria-item-info{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0 ,0 ,0 .3);
+}
+
+.galeria-item-info{
+    display: none;
+}
+
+.galeria-item-info li{
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.galeria-item-likes{
+    margin-right: 2.2rem;
+}
+
+.galeria-item-tipo{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.5rem;
+    text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, .1);
+}
+
+.fa-clone,
+.fa-comment{
+    transform: rotateY(180deg);
+}
+
+.galeria-imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cargador{
+    width: 5rem;
+    height: 5rem;
+    border: 0.6rem solid #999;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: loader 500 ms linear infinite;
+}
+
+/*media Query*/
+@media screen and (max-width: 40rem){
+    .perfil{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 4rem 0;
+    }
+}
+
+.perfil::after{
+    display: none;
+}
+
+.imagen-perfil,
+.perfil-usuario-opciones,
+.perfil-biografia,
+.perfil-estadisticas{
+    float: none;
+    width: auto;
+}
+
+.imagen-perfil img{
+    width: 7.7rem;
+}
+
+.perfil-usuario-opciones{
+    flex-basis: calc(100% - 10.7rem);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.perfil-usuario-nombre{
+    font-size: 2.2rem;
+}
+
+.boton-perfil-editar{
+    order: 1;
+    padding: 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@supports (display:grid){
+    .perfil{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(3,auto);
+        grid-column-gap: 3rem;
+        align-items: center;
+    }
+}
+
+.imagen-perfil{
+    grid-row: 1 / -1;
+}
+.imagenperfil,
+.perfil-usuario-opciones,
+.perfil-estadisticas,
+.perfil-biografia,
+.perfil-item,
+.galeria{
+    width: auto;
+    margin: 0;
 }
