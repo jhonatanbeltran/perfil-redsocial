@@ -105,7 +105,8 @@ img{
 
 .boton-perfil-opciones-btn{
     font-size: 1.6rem;
-    margin-left:0.1rem;
+    margin-left:4rem;
+    height: 5rem;
 }
 
 .perfil-estadisticas{
@@ -245,6 +246,7 @@ img{
     text-align: center;
     margin-top: 1rem;
 }
+
 
 @supports (display:grid){
     .perfil{
